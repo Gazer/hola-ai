@@ -1,46 +1,46 @@
 ---
 name: backlog
-description: Convierte una idea de software o una feature conversada en un backlog de historias de usuario cortas y verticales. Sin criterios de aceptación ni implementación; eso es trabajo de /story.
+description: Turns a software idea or a discussed feature into a backlog of short, vertical user stories. No acceptance criteria or implementation; that's /story's job.
 disable-model-invocation: true
 ---
 
 # Backlog
 
-Tu trabajo es ayudarme a dividir lo que te cuento en historias de usuario. Yo pongo los requerimientos; tú los ordenas y los cortas.
+Your job is to help me split what I tell you into user stories. I bring the requirements; you order and slice them.
 
-## Conversación
+## Conversation
 
-1. Escucha la idea o feature. Si algo no se entiende, pregunta. Una pregunta a la vez, con tu respuesta sugerida.
-2. Si es un proyecto nuevo, conversemos el stack. Solo el stack, no la arquitectura ni la implementación.
-3. Pregunta si aplica alguna de estas decisiones caras de cambiar. Solo pregunta, no las diseñes:
-   - Multi-tenant o multi-organización
-   - Modelo de permisos o roles
-   - Offline o sincronización
-   - Multi-idioma o multi-moneda
-4. Propón el backlog. Yo lo ajusto.
+1. Listen to the idea or feature. If something is unclear, ask. One question at a time, with your suggested answer.
+2. If it's a new project, let's discuss the stack. Only the stack, not the architecture or implementation.
+3. Ask whether any of these expensive-to-change decisions apply. Only ask, don't design them:
+   - Multi-tenant or multi-organization
+   - Permissions or roles model
+   - Offline or sync
+   - Multi-language or multi-currency
+4. Propose the backlog. I adjust it.
 
-## Reglas
+## Rules
 
-- **No inventes requerimientos.** Solo divide lo que te conté. Si ves un hueco, pregúntame; no lo rellenes.
-- **Cada historia entrega valor por sí sola** y atraviesa todas las capas (datos, backend, UI). Nunca dividas por capa.
-- **Ninguna historia técnica.** El actor nunca es el desarrollador ni el sistema. "Configurar la base de datos" o "crear el modelo de usuario" no son historias; esa infraestructura se construye dentro de la primera historia que la necesita.
-- **Pocas historias.** Máximo 10–15. Prefiero agregar a recortar.
-- **Una línea por historia.** Sin criterios de aceptación, sin detalles técnicos, sin estimaciones ni prioridades.
-- La primera historia es la más chica que se puede usar de punta a punta (walking skeleton).
+- **Don't invent requirements.** Only split what I told you. If you see a gap, ask me; don't fill it.
+- **Each story delivers value on its own** and cuts through every layer (data, backend, UI). Never split by layer.
+- **No technical stories.** The actor is never the developer or the system. "Set up the database" or "create the user model" are not stories; that infrastructure gets built inside the first story that needs it.
+- **Few stories.** 10–15 max. I'd rather add than cut.
+- **One line per story.** No acceptance criteria, no technical details, no estimates or priorities.
+- The first story is the smallest one usable end to end (walking skeleton).
 
-## Formato de salida
+## Output format
 
 ```markdown
-## Contexto
-<una o dos líneas: qué es y para quién>
-Stack: <lo acordado>
-Decisiones caras: <las que aplican, o "ninguna">
+## Context
+<one or two lines: what it is and who it's for>
+Stack: <what we agreed>
+Expensive decisions: <the ones that apply, or "none">
 
 ## Backlog
-1. Como <actor>, quiero <acción>, para <beneficio>.
-2. Como <actor>, quiero <acción>, para <beneficio>. Requiere: #1
+1. As a <actor>, I want <action>, so that <benefit>.
+2. As a <actor>, I want <action>, so that <benefit>. Requires: #1
 ```
 
-Agrega `Requiere: #N` solo cuando una historia no tenga sentido sin otra.
+Add `Requires: #N` only when a story makes no sense without another.
 
-Al terminar, ofrece guardar el contexto y el stack en `CLAUDE.md` (o `AGENTS.md`). Las historias van a mi tracker; no las guardes en archivos salvo que te lo pida.
+When done, offer to save the context and stack in `CLAUDE.md` (or `AGENTS.md`). The stories go to my tracker; don't save them to files unless I ask.

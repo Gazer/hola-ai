@@ -4,8 +4,6 @@ Agent skills for building software with AI **without letting go of the wheel**. 
 
 The AI splits, proposes and writes code in small steps. You decide.
 
-> The skills are written in Spanish.
-
 ## The flow
 
 ```
@@ -41,6 +39,8 @@ cp -r hola-ai/skills/* <your-project>/.claude/skills/   # one project
 ```
 
 The skills are only invoked manually (`/backlog`, `/story`, `/pair`), never automatically.
+
+Or ask your agent to install these skills!
 
 ---
 
